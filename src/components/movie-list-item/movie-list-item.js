@@ -21,7 +21,7 @@ const MovieListItem = ({ name, viewers, favourite, like, id }) => {
 	return (
 		<li className={`list-group-item d-flex justify-content-between ${favourite && "favourite"} ${like && "like"}`}>
 			<span className='list-group-item-label' onClick={OnToggle} data-toggle="like">{name}</span>
-			<input type='number' className='list-group-item-input' defaultValue={viewers} />
+			<input type='number' className='list-group-item-input' defaultValue={viewers} readonly/>
 			<div className='d-flex justify-content-center align-items-center'>
 				<button type='button' className='btn-cookie btn-sm ' data-toggle="favourite" onClick={OnToggle}>
 					<i className='fas fa-cookie'></i>
